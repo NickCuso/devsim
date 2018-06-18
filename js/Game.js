@@ -70,7 +70,10 @@ function refreshResources()
 {
     nebReadWithStatus("getInfo", null, function(info)
     {
-        vue.info = info;
+        if(info)
+        {
+            vue.info = info;
+        }
     });
 }
 refreshResources();
