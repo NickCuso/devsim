@@ -72,6 +72,9 @@ function refreshResources()
     {
         if(info)
         {
+            var temp = info.items[2];
+            info.items[2] = info.items[1];
+            info.items[1] = temp;
             vue.info = info;
         }
     });
