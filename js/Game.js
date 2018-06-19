@@ -9,7 +9,8 @@ var vue = new Vue({
         display_resources: 0,
         display_value: 0,
         show_buy_options: false,
-        nas_to_spend: 0.0001
+        nas_to_spend: 0.0001,
+        green: true
     },
     methods: {
         buy,
@@ -100,7 +101,17 @@ function refreshUI()
     }
 
     var delta_value = target_value - vue.display_value;
-    vue.display_value += delta_value * .05;
+    var multiple = .05;
+    if(delta_value < 0)
+    {
+        vue.green = false;
+        multiple *= 3;
+    }
+    else 
+    {
+        vue.green = true;
+    }
+    vue.display_value += delta_value * multiple;
     if(!vue.display_value)
     {
         vue.display_value = 0;

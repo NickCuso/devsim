@@ -22,11 +22,18 @@
     
 </head>
 <body>
-    
-    
     <div class="container mt-5">
         <div id="header"></div>
-            <span  id="body">
+            <span id="body">
+                <div id="loading" v-if="!info.items">
+                    <br><br>
+                    <div class="row justify-content-center text-center">
+                        <div class="col-12 mt-5">
+                            <div class="loading">Loading</div>
+                        </div>
+                    </div>
+                </div>
+
         <div id="backdrop" v-on:click="show_buy_options=false" v-if="show_buy_options"></div>
         
         <div class="row">
@@ -39,7 +46,9 @@
                 v-on:click="redeemNas()">
                 Sell Out
                 <br>
-                {{ display_value | nas }}
+                {{ display_value | nas }} 
+                <img src="GreenArrow.png" v-if="green" class="price-indicator" />
+                <img src="RedArrow.png" v-else class="price-indicator" />
             </button>
         </div>
             <div class="col-4 text-center">
