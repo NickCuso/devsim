@@ -3,6 +3,7 @@ var contract_address;
 
 var gas_price = 1000000;
 var gas_limit = 200000;
+// TODO clean this up
 var contract_address = "n1rFJSKaqS198cbDChWD3zHQusqgmAHc3AG"//neb_contract.contract;
 var nebulas_domain =  "https://mainnet.nebulas.io";//neb_contract.apiUrl; //
 var is_mainnet = true;
@@ -185,7 +186,6 @@ function nebReadWithStatus(method, args, results)
     {
         if(error) 
         { 
-            showStatus("Error", error, 5000);
             console.log(error);
             return;
         }
