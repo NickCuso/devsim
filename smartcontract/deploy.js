@@ -82,13 +82,13 @@ async function run(){
         fs.writeFileSync('../static/settings.js', content);
         
         await callMethod("setStartingResources", '[42]'); 
-        await callMethod("setWorldResources", '[5555555555]'); 
-        await callMethod("setBuyPrice", '[100000000]'); 
+        await callMethod("setWorldResources", '[555555555]'); 
+        await callMethod("setBuyPrice", '[10000000]'); 
 
         var items = [
           // Raw production
           {name: "Intern", sort_id: 0, start_price: 1, resources_per_s: 1},
-          {name: "Free Lancer", sort_id: 1, start_price: 30, resources_per_s: 5},
+          {name: "Freelancer", sort_id: 1, start_price: 30, resources_per_s: 5},
           {name: "Contractor", sort_id: 2, start_price: 500, resources_per_s: 10},
           {name: "Market Analyst", sort_id: 3, start_price: 15000, resources_per_s: 25},
           {name: "Junior Developer", sort_id: 4, start_price: 420000, resources_per_s: 50},

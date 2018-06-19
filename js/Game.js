@@ -52,10 +52,7 @@ function buy(name, quantity)
 
 function redeemNas()
 {
-    nebWriteWithStatus("redeemNas", null, 0, "You Got Money!!  Check your NAS balance.", function()
-    {
-        redirectToHome("/exit.html");
-    });
+    nebWriteWithStatus("redeemNas", null, 0, "You Got Money!!  Check your NAS balance.");
 }
 
 function buyWithNas(value)
